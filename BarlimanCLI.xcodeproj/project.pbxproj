@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F94329E9B93A6333C078ECC /* Pods_BarlimanCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */; };
+		B5190A3C210E914200F5FFB0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A3B210E914200F5FFB0 /* main.swift */; };
+		B5190A50210E923C00F5FFB0 /* RunSchemeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A45210E923B00F5FFB0 /* RunSchemeOperation.swift */; };
+		B5190A52210E923C00F5FFB0 /* SchemeEditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A48210E923B00F5FFB0 /* SchemeEditorTextView.swift */; };
+		B5190A54210E923C00F5FFB0 /* CodeRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A4A210E923C00F5FFB0 /* CodeRunner.swift */; };
+		B5190A56210E923C00F5FFB0 /* SchemeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A4C210E923C00F5FFB0 /* SchemeTestView.swift */; };
+		B5190A57210E923C00F5FFB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A4D210E923C00F5FFB0 /* Extensions.swift */; };
+		B5190A59210E923C00F5FFB0 /* SchemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A4F210E923C00F5FFB0 /* SchemeTest.swift */; };
+		B5190A5B210E99D600F5FFB0 /* Semantics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A5A210E99D600F5FFB0 /* Semantics.swift */; };
+		B5190A5E210E9D9C00F5FFB0 /* mk-and-rel-interp in Resources */ = {isa = PBXBuildFile; fileRef = B5190A44210E923A00F5FFB0 /* mk-and-rel-interp */; };
+		B5B7A989210E9FF80069FC6B /* mk-and-rel-interp in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5190A44210E923A00F5FFB0 /* mk-and-rel-interp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5B7A988210E9FE80069FC6B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				B5B7A989210E9FF80069FC6B /* mk-and-rel-interp in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.debug.xcconfig"; sourceTree = "<group>"; };
+		8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarlimanCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.release.xcconfig"; sourceTree = "<group>"; };
+		B5190A38210E914200F5FFB0 /* BarlimanCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BarlimanCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5190A3B210E914200F5FFB0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5190A44210E923A00F5FFB0 /* mk-and-rel-interp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "mk-and-rel-interp"; sourceTree = "<group>"; };
+		B5190A45210E923B00F5FFB0 /* RunSchemeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunSchemeOperation.swift; sourceTree = "<group>"; };
+		B5190A46210E923B00F5FFB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5190A48210E923B00F5FFB0 /* SchemeEditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeEditorTextView.swift; sourceTree = "<group>"; };
+		B5190A4A210E923C00F5FFB0 /* CodeRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeRunner.swift; sourceTree = "<group>"; };
+		B5190A4C210E923C00F5FFB0 /* SchemeTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeTestView.swift; sourceTree = "<group>"; };
+		B5190A4D210E923C00F5FFB0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5190A4F210E923C00F5FFB0 /* SchemeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeTest.swift; sourceTree = "<group>"; };
+		B5190A5A210E99D600F5FFB0 /* Semantics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semantics.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5190A35210E914200F5FFB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F94329E9B93A6333C078ECC /* Pods_BarlimanCLI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		676F95A65DC436FA5533292D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9B547C5BF4D6D49EE25B966 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */,
+				B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5190A2F210E914200F5FFB0 = {
+			isa = PBXGroup;
+			children = (
+				B5190A3A210E914200F5FFB0 /* BarlimanCLI */,
+				B5190A39210E914200F5FFB0 /* Products */,
+				A9B547C5BF4D6D49EE25B966 /* Pods */,
+				676F95A65DC436FA5533292D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B5190A39210E914200F5FFB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5190A38210E914200F5FFB0 /* BarlimanCLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5190A3A210E914200F5FFB0 /* BarlimanCLI */ = {
+			isa = PBXGroup;
+			children = (
+				B5190A4A210E923C00F5FFB0 /* CodeRunner.swift */,
+				B5190A4D210E923C00F5FFB0 /* Extensions.swift */,
+				B5190A46210E923B00F5FFB0 /* Info.plist */,
+				B5190A44210E923A00F5FFB0 /* mk-and-rel-interp */,
+				B5190A45210E923B00F5FFB0 /* RunSchemeOperation.swift */,
+				B5190A48210E923B00F5FFB0 /* SchemeEditorTextView.swift */,
+				B5190A4F210E923C00F5FFB0 /* SchemeTest.swift */,
+				B5190A4C210E923C00F5FFB0 /* SchemeTestView.swift */,
+				B5190A3B210E914200F5FFB0 /* main.swift */,
+				B5190A5A210E99D600F5FFB0 /* Semantics.swift */,
+			);
+			path = BarlimanCLI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5190A37210E914200F5FFB0 /* BarlimanCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5190A3F210E914200F5FFB0 /* Build configuration list for PBXNativeTarget "BarlimanCLI" */;
+			buildPhases = (
+				8E33F31D446A82DDAB665BD4 /* [CP] Check Pods Manifest.lock */,
+				B5190A34210E914200F5FFB0 /* Sources */,
+				B5190A35210E914200F5FFB0 /* Frameworks */,
+				B5190A5D210E9D9600F5FFB0 /* Resources */,
+				B5B7A988210E9FE80069FC6B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarlimanCLI;
+			productName = BarlimanCLI;
+			productReference = B5190A38210E914200F5FFB0 /* BarlimanCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5190A30210E914200F5FFB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Ben Jenkins";
+				TargetAttributes = {
+					B5190A37210E914200F5FFB0 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B5190A33210E914200F5FFB0 /* Build configuration list for PBXProject "BarlimanCLI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5190A2F210E914200F5FFB0;
+			productRefGroup = B5190A39210E914200F5FFB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5190A37210E914200F5FFB0 /* BarlimanCLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5190A5D210E9D9600F5FFB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5190A5E210E9D9C00F5FFB0 /* mk-and-rel-interp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E33F31D446A82DDAB665BD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarlimanCLI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5190A34210E914200F5FFB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5190A50210E923C00F5FFB0 /* RunSchemeOperation.swift in Sources */,
+				B5190A5B210E99D600F5FFB0 /* Semantics.swift in Sources */,
+				B5190A57210E923C00F5FFB0 /* Extensions.swift in Sources */,
+				B5190A52210E923C00F5FFB0 /* SchemeEditorTextView.swift in Sources */,
+				B5190A54210E923C00F5FFB0 /* CodeRunner.swift in Sources */,
+				B5190A3C210E914200F5FFB0 /* main.swift in Sources */,
+				B5190A56210E923C00F5FFB0 /* SchemeTestView.swift in Sources */,
+				B5190A59210E923C00F5FFB0 /* SchemeTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5190A3D210E914200F5FFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5190A3E210E914200F5FFB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B5190A40210E914200F5FFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B5190A41210E914200F5FFB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5190A33210E914200F5FFB0 /* Build configuration list for PBXProject "BarlimanCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5190A3D210E914200F5FFB0 /* Debug */,
+				B5190A3E210E914200F5FFB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5190A3F210E914200F5FFB0 /* Build configuration list for PBXNativeTarget "BarlimanCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5190A40210E914200F5FFB0 /* Debug */,
+				B5190A41210E914200F5FFB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5190A30210E914200F5FFB0 /* Project object */;
+}
