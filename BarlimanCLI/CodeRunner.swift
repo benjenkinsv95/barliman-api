@@ -27,7 +27,7 @@ class CodeRunner {
                  interpreterSemantics: String,
                  tests: [SchemeTest]) -> String? {
         // see how many operations are currently in the queue
-        print("operation count: \(runSchemeOperationQueue.operationCount)")
+        logger.info("operation count: \(runSchemeOperationQueue.operationCount)")
         runSchemeOperationQueue.cancelAllOperations()
 
         
@@ -75,7 +75,7 @@ class CodeRunner {
         do {
             new_simple_query_template_string = try String(contentsOfFile: new_simple_query_template!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load new_simple_query_template\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load new_simple_query_template\n")
             new_simple_query_template_string = ""
         }
 
@@ -87,7 +87,7 @@ class CodeRunner {
         do {
             new_test_query_template_string = try String(contentsOfFile: new_test_query_template!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load new_test_query_template\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load new_test_query_template\n")
             new_test_query_template_string = ""
         }
 
@@ -99,7 +99,7 @@ class CodeRunner {
         do {
             new_alltests_query_template_string = try String(contentsOfFile: new_alltests_query_template!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load new_test_query_template\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load new_test_query_template\n")
             new_alltests_query_template_string = ""
         }
 
@@ -159,7 +159,7 @@ class CodeRunner {
                 try newAlltestsActualQueryString.write(to: pathNewActualAlltests, atomically: false, encoding: String.Encoding.utf8)
             } catch {
                 // this error handling could be better!  :)
-                print("couldn't write to query files")
+                logger.error("couldn't write to query files")
             }
         }
 
@@ -198,12 +198,12 @@ class CodeRunner {
                 let runSchemeTestOperation = buildRunSchemeOperationFor(test: test,
                         withQueryTemplate: new_test_query_template_string, andDefinitionText: definitionText)
 
-                print("queuing \(test.name)")
+                logger.info("queuing \(test.name)")
                 runSchemeOperationQueue.addOperation(runSchemeTestOperation)
             }
         }
         
-        print("Waiting for finish")
+        logger.info("Waiting for finish")
         runSchemeOperationQueue.waitUntilAllOperationsAreFinished()
         return bestGuessInProgress
     }
@@ -267,7 +267,7 @@ class CodeRunner {
             try actualTestQuery.write(to: actualTestPath, atomically: false, encoding: String.Encoding.utf8)
         } catch {
             // this error handling could be better!  :)
-            print("couldn't write to query files")
+            logger.error("couldn't write to query files")
         }
     }
 
@@ -311,7 +311,7 @@ class CodeRunner {
         do {
             alltests_string_part_1 = try String(contentsOfFile: interp_alltests_query_string_part_1!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load alltests_string_part_1\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load alltests_string_part_1\n")
             alltests_string_part_1 = ""
         }
 
@@ -319,7 +319,7 @@ class CodeRunner {
         do {
             alltests_string_part_2 = try String(contentsOfFile: interp_alltests_query_string_part_2!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load alltests_string_part_2\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load alltests_string_part_2\n")
             alltests_string_part_2 = ""
         }
 
@@ -348,7 +348,7 @@ class CodeRunner {
 
         let fullString: String = ";; allTests" + "\n" + allTestWriteString
 
-        print("queryAllTests string:\n \(fullString)\n")
+        logger.info("queryAllTests string:\n \(fullString)\n")
         return fullString
     }
 
@@ -378,7 +378,7 @@ class CodeRunner {
         do {
             eval_string_part_1 = try String(contentsOfFile: interp_eval_query_string_part_1!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load eval_string_part_1\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load eval_string_part_1\n")
             eval_string_part_1 = ""
         }
 
@@ -386,7 +386,7 @@ class CodeRunner {
         do {
             eval_string_part_2 = try String(contentsOfFile: interp_eval_query_string_part_2!)
         } catch {
-            print("!!!!!  LOAD_ERROR -- can't load eval_string_part_2\n")
+            logger.error("!!!!!  LOAD_ERROR -- can't load eval_string_part_2\n")
             eval_string_part_2 = ""
         }
 
@@ -414,7 +414,7 @@ class CodeRunner {
                 (simple ? parse_ans_string : parse_with_fake_defns_ans_string) + "\n\n" +
                 define_ans_string + "\n\n"
 
-        print("query string:\n \(full_string)\n")
+        logger.info("query string:\n \(full_string)\n")
 
         return full_string
     }

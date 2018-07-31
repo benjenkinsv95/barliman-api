@@ -22,13 +22,13 @@ router.get('/hello', function(req, res, next) {
 router.get('/barliman', function(req, res, next) {
     const { exec } = require('child_process');
 
+
     exec('./BarlimanCLI/BarlimanCLI', (err, stdout, stderr) => {
         if (err) {
             return;
         }
         res.json({"payload": stdout})
     });
-
 });
 
 module.exports = router;

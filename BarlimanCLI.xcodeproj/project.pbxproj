@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F94329E9B93A6333C078ECC /* Pods_BarlimanCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */; };
+		17C8BCA9A135A636F6FD7CA7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B0B80B52859BC7F3ED62 /* Logger.swift */; };
 		B5190A3C210E914200F5FFB0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A3B210E914200F5FFB0 /* main.swift */; };
 		B5190A50210E923C00F5FFB0 /* RunSchemeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A45210E923B00F5FFB0 /* RunSchemeOperation.swift */; };
 		B5190A52210E923C00F5FFB0 /* SchemeEditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A48210E923B00F5FFB0 /* SchemeEditorTextView.swift */; };
@@ -34,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17C8B0B80B52859BC7F3ED62 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.debug.xcconfig"; sourceTree = "<group>"; };
 		8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarlimanCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F94329E9B93A6333C078ECC /* Pods_BarlimanCLI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +110,7 @@
 				B5190A4C210E923C00F5FFB0 /* SchemeTestView.swift */,
 				B5190A3B210E914200F5FFB0 /* main.swift */,
 				B5190A5A210E99D600F5FFB0 /* Semantics.swift */,
+				17C8B0B80B52859BC7F3ED62 /* Logger.swift */,
 			);
 			path = BarlimanCLI;
 			sourceTree = "<group>";
@@ -121,7 +122,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5190A3F210E914200F5FFB0 /* Build configuration list for PBXNativeTarget "BarlimanCLI" */;
 			buildPhases = (
-				8E33F31D446A82DDAB665BD4 /* [CP] Check Pods Manifest.lock */,
 				B5190A34210E914200F5FFB0 /* Sources */,
 				B5190A35210E914200F5FFB0 /* Frameworks */,
 				B5190A5D210E9D9600F5FFB0 /* Resources */,
@@ -179,27 +179,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8E33F31D446A82DDAB665BD4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BarlimanCLI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B5190A34210E914200F5FFB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -213,6 +192,7 @@
 				B5190A3C210E914200F5FFB0 /* main.swift in Sources */,
 				B5190A56210E923C00F5FFB0 /* SchemeTestView.swift in Sources */,
 				B5190A59210E923C00F5FFB0 /* SchemeTest.swift in Sources */,
+				17C8BCA9A135A636F6FD7CA7 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

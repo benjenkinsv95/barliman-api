@@ -23,7 +23,7 @@ class SchemeEditorTextView: NSTextView {
     // Adapted from http://nshipster.com/nsundomanager/
     func updateTextStorage(_ newPartialString: NSAttributedString) {
 
-        Swift.print("undo updateTextStorage called with string: \(newPartialString.string)")
+        logger.info("undo updateTextStorage called with string: \(newPartialString.string)")
 
         let oldAttrString: NSAttributedString = self.attributedString()
         let oldAttrStringCopy: NSMutableAttributedString = NSMutableAttributedString.init(attributedString: oldAttrString)
@@ -33,7 +33,7 @@ class SchemeEditorTextView: NSTextView {
         let undoManager = self.undoManager
         undoManager!.registerUndo(withTarget: self, selector: #selector(undoTextStorage(_:)), object: undoState)
 
-        Swift.print("undo message will contain string: \(oldAttrStringCopy.string)")
+        logger.info("undo message will contain string: \(oldAttrStringCopy.string)")
 
         self.textStorage?.replaceCharacters(in: self.selectedRange, with: newPartialString)
 
@@ -46,7 +46,7 @@ class SchemeEditorTextView: NSTextView {
         let newAttrString: NSAttributedString = undoState["attrString"] as! NSAttributedString
         let selectedRange: NSRange = undoState["selectedRange"] as! NSRange
 
-        Swift.print("undo undoTextStorage called with string: \(newAttrString.string)")
+        logger.info("undo undoTextStorage called with string: \(newAttrString.string)")
 
 
         let oldAttrString: NSAttributedString = self.attributedString()
@@ -58,7 +58,7 @@ class SchemeEditorTextView: NSTextView {
         let undoManager = self.undoManager
         undoManager!.registerUndo(withTarget: self, selector: #selector(undoTextStorage(_:)), object: undoState)
 
-        Swift.print("undo undoTextStorage will contain string: \(oldAttrStringCopy.string)")
+        logger.info("undo undoTextStorage will contain string: \(oldAttrStringCopy.string)")
 
         self.textStorage?.setAttributedString(newAttrString)
         self.setSelectedRange(selectedRange)

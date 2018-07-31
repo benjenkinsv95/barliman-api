@@ -33,7 +33,7 @@ class RunSchemeOperation: Operation {
     }
 
     override func cancel() {
-        print("!!! cancel called!")
+        logger.warn("!!! cancel called!")
 
         super.cancel()
 
@@ -47,7 +47,7 @@ class RunSchemeOperation: Operation {
 
         // update the user interface, which *must* be done through the main thread
         OperationQueue.main.addOperation {
-            print(self.kIllegalSexprString)
+            logger.error(self.kIllegalSexprString)
         }
     }
 
@@ -56,7 +56,7 @@ class RunSchemeOperation: Operation {
         // update the user interface, which *must* be done through the main thread
         OperationQueue.main.addOperation {
 
-            print(self.kParseErrorString)
+            logger.error(self.kParseErrorString)
 
             // Be polite and cancel the allTests operation as well, since it cannot possibly succeed
             self.codeRunner.schemeOperationAllTests?.cancel()
@@ -123,12 +123,12 @@ class RunSchemeOperation: Operation {
 
                 if datastring == "illegal-sexp-in-test/answer" {
 
-                    print(self.kIllegalSexprString)
+                    logger.error(self.kIllegalSexprString)
 
                     // Be polite and cancel the allTests operation as well, since it cannot possibly succeed
                     self.codeRunner.schemeOperationAllTests?.cancel()
                 } else if datastring == "parse-error-in-test/answer" {
-                    print(self.kParseErrorString)
+                    logger.error(self.kParseErrorString)
 
                     // Be polite and cancel the allTests operation as well, since it cannot possibly succeed
                     self.codeRunner.schemeOperationAllTests?.cancel()
@@ -137,7 +137,7 @@ class RunSchemeOperation: Operation {
                     // We represent this in the UI as the ??? "thinking" string without the spinner
 
 
-                    print(self.kThinkingString)
+                    logger.info(self.kThinkingString)
                 } else if datastring == "()" { // parsed, but evaluator query failed!
                     onTestFailure(inputField, outputField: outputField, label: label)
                 } else { // parsed, and evaluator query succeeded!
@@ -157,14 +157,14 @@ class RunSchemeOperation: Operation {
                 let timeInterval: Double = endTime.timeIntervalSince(startTime);
 
                 // formatting from realityone's answer to http://stackoverflow.com/questions/24051314/precision-string-format-specifier-in-swift
-                print(String(format: "Failed (%.2f s)",  timeInterval))
+                logger.info(String(format: "Failed (%.2f s)",  timeInterval))
 
                 // Be polite and cancel the allTests operation as well, since it cannot possibly succeed
                 self.codeRunner.schemeOperationAllTests?.cancel()
             }
 
             func onTestSyntaxError(_ inputField: NSTextField, outputField: NSTextField, spinner: NSProgressIndicator, label: NSTextField) {
-                print( self.kIllegalSexprString)
+                logger.error( self.kIllegalSexprString)
             }
 
             func onBestGuessSuccess(_ bestGuessView: NSTextView?, label: NSTextField?, guess: String) {
@@ -181,12 +181,12 @@ class RunSchemeOperation: Operation {
                     bestGuessView?.textStorage?.setAttributedString(NSAttributedString(string: "" as String))
                     setFontAndSize(bestGuessView)
                     
-                    print(self.kThinkingString)
+                    logger.info(self.kThinkingString)
 
                 } else { // success!
 
-                    print("Best Guess Found!")
-                    print(guess)
+                    logger.info("Best Guess Found!")
+                    logger.info(guess)
                     codeRunner.bestGuessInProgress = guess
                     bestGuessView?.textStorage?.setAttributedString(NSAttributedString(string: guess))
                     setFontAndSize(bestGuessView)
@@ -205,7 +205,7 @@ class RunSchemeOperation: Operation {
                 bestGuessView?.textStorage?.setAttributedString(NSAttributedString(string: "" as String))
                 setFontAndSize(bestGuessView)
                 
-                print(String(format: "Failed (%.2f s)",  timeInterval))
+                logger.info(String(format: "Failed (%.2f s)",  timeInterval))
 
                 // Be polite and cancel all the other tests, since they must succeed!
                 self.codeRunner.cancelAllOperations()
@@ -239,7 +239,7 @@ class RunSchemeOperation: Operation {
                         self.illegalSexpInDefn()
                     } else if datastring == "()" {
 
-                        print(self.kEvaluationFailedString)
+                        logger.info(self.kEvaluationFailedString)
 
                         // Be polite and cancel the allTests operation as well, since it cannot possibly succeed
                         self.codeRunner.schemeOperationAllTests?.cancel()
@@ -263,7 +263,7 @@ class RunSchemeOperation: Operation {
                 }
             } else if exitStatus == 15 {
                 // SIGTERM exitStatus
-                print("SIGTERM !!!  taskType = \( self.taskType )")
+                logger.error("SIGTERM !!!  taskType = \( self.taskType )")
 
                 // allTests must have been cancelled by a failing test, meaning there is no way for allTests to succeed
                 if self.taskType == "allTests" {
@@ -296,8 +296,8 @@ class RunSchemeOperation: Operation {
                 }
             }
 
-            print("datastring for process \( self.task.processIdentifier ): \(datastring)")
-            print("error datastring for process \( self.task.processIdentifier ): \(errorDatastring)")
+            logger.info("datastring for process \( self.task.processIdentifier ): \(datastring)")
+            logger.error("error datastring for process \( self.task.processIdentifier ): \(errorDatastring)")
         }
 //    }
 }
