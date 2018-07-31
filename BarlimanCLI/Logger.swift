@@ -5,6 +5,11 @@
 
 import Foundation
 
+public struct StderrOutputStream: TextOutputStream {
+    public mutating func write(_ string: String) { fputs(string, stderr) }
+}
+var errStream = StderrOutputStream()
+
 let logger = Logger()
 fileprivate let level = Level.none
 enum Level: Int {
@@ -35,6 +40,6 @@ class Logger {
         guard level.rawValue >= Level.error.rawValue else {
             return
         }
-        print("[error] \(message)")
+        print("[error] \(message)", to: &errStream)
     }
 }

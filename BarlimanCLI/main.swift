@@ -25,6 +25,6 @@ if let bestGuess = possibleBestGuess {
     logger.info("Best guess is")
     print(bestGuess)
 } else {
-    print("Failed to calculate best guess.")
+    print("Failed to calculate best guess.", to: &errStream)
 }
 
