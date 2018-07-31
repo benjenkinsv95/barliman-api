@@ -5,7 +5,7 @@
 
 import Cocoa
 
-struct SchemeTest {
+struct SchemeTest{
     var shouldProcess: Bool {
         return !input.isEmpty && !output.isEmpty
     }

@@ -9,16 +9,16 @@
 
 import Foundation
 
-//let definitionText = CommandLine.arguments[1]
-let definitionText = "(define ,A (lambda ,B ,C))"
-logger.info("Definition text")
-logger.info(definitionText)
+let testSuiteJson = CommandLine.arguments[1]
+let testSuite = TestLoader.load(fromJson: testSuiteJson)
 
-let test1 = SchemeTest(input: "(append '(,g1) '(,g2))", output: "`(,g1 ,g2)", id: 1)
-let test2 = SchemeTest(input: "(append '(,g3 ,g4) '())", output: "`(,g3 ,g4)", id: 2)
+logger.info("Definition text")
+logger.info(testSuite.definitionText)
 
 let codeRunner = CodeRunner()
-let possibleBestGuess = codeRunner.runCode(definitionText: definitionText, interpreterSemantics: semantics, tests: [test1, test2])
+let possibleBestGuess = codeRunner.runCode(definitionText: testSuite.definitionText,
+        interpreterSemantics: semantics,
+        tests: testSuite.tests)
 
 
 if let bestGuess = possibleBestGuess {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17C8BCA9A135A636F6FD7CA7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B0B80B52859BC7F3ED62 /* Logger.swift */; };
+		17C8BE02CFDB38AF36C233F6 /* TestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8B9CA6B017E6470DC333E /* TestLoader.swift */; };
 		B5190A3C210E914200F5FFB0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A3B210E914200F5FFB0 /* main.swift */; };
 		B5190A50210E923C00F5FFB0 /* RunSchemeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A45210E923B00F5FFB0 /* RunSchemeOperation.swift */; };
 		B5190A52210E923C00F5FFB0 /* SchemeEditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5190A48210E923B00F5FFB0 /* SchemeEditorTextView.swift */; };
@@ -35,9 +36,8 @@
 
 /* Begin PBXFileReference section */
 		17C8B0B80B52859BC7F3ED62 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.debug.xcconfig"; sourceTree = "<group>"; };
+		17C8B9CA6B017E6470DC333E /* TestLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLoader.swift; sourceTree = "<group>"; };
 		8A23C60A1EF0B903E0F02EA5 /* Pods_BarlimanCLI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarlimanCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarlimanCLI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarlimanCLI/Pods-BarlimanCLI.release.xcconfig"; sourceTree = "<group>"; };
 		B5190A38210E914200F5FFB0 /* BarlimanCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BarlimanCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5190A3B210E914200F5FFB0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5190A44210E923A00F5FFB0 /* mk-and-rel-interp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "mk-and-rel-interp"; sourceTree = "<group>"; };
@@ -70,22 +70,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A9B547C5BF4D6D49EE25B966 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */,
-				B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B5190A2F210E914200F5FFB0 = {
 			isa = PBXGroup;
 			children = (
 				B5190A3A210E914200F5FFB0 /* BarlimanCLI */,
 				B5190A39210E914200F5FFB0 /* Products */,
-				A9B547C5BF4D6D49EE25B966 /* Pods */,
 				676F95A65DC436FA5533292D /* Frameworks */,
+				17C8B9CA6B017E6470DC333E /* TestLoader.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +184,7 @@
 				B5190A56210E923C00F5FFB0 /* SchemeTestView.swift in Sources */,
 				B5190A59210E923C00F5FFB0 /* SchemeTest.swift in Sources */,
 				17C8BCA9A135A636F6FD7CA7 /* Logger.swift in Sources */,
+				17C8BE02CFDB38AF36C233F6 /* TestLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +306,6 @@
 		};
 		B5190A40210E914200F5FFB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3172B264DF8F748F1534450E /* Pods-BarlimanCLI.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -324,7 +315,6 @@
 		};
 		B5190A41210E914200F5FFB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35F5567C1B70A1C4AC63418 /* Pods-BarlimanCLI.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

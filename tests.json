@@ -1,0 +1,15 @@
+{
+  "definition": "(define ,A (lambda ,B ,C))",
+  "tests": [
+    {
+      "id": 1,
+      "input": "(append '(,g1) '(,g2))",
+      "output": "`(,g1 ,g2)"
+    },
+    {
+      "id": 2,
+      "input": "(append '(,g3 ,g4) '())",
+      "output": "`(,g3 ,g4)"
+    }
+  ]
+}
