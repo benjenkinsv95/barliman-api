@@ -1,25 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.redirect('http://example.com');
+ res.redirect('https://github.com/benjenkinsv95/barliman-api')
 });
-
-
-router.get('/hello', function(req, res, next) {
-    const { exec } = require('child_process');
-
-    exec('echo \'hello world\'', (err, stdout, stderr) => {
-        if (err) {
-            return;
-        }
-        res.json({"payload": stdout})
-  });
-
-});
-
-
 
 router.post('/synthesize', function(req, res, next) {
     const { exec } = require('child_process');
@@ -46,10 +33,10 @@ router.post('/synthesize', function(req, res, next) {
 
     setTimeout(function() {
             if (isRunning) {
+                barlimanProcess.kill();
                 return res.status(400).send({
                     message: 'Couldnt calculate'
                 });
-                barlimanProcess.kill();
             }
         }, 15000);
 });
