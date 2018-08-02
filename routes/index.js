@@ -4,7 +4,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.redirect('http://example.com');
  res.redirect('https://github.com/benjenkinsv95/barliman-api')
 });
 
