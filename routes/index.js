@@ -37,7 +37,7 @@ router.post('/synthesize', function(req, res, next) {
                     message: 'Couldnt calculate'
                 });
             }
-        }, 15000);
+        }, 60000);
 });
 
 
